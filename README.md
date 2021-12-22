@@ -1,6 +1,11 @@
-[![CC-BY-SA](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-sa/4.0/)
-
 # History of Testing
 
-Interesting facts from the [software] testing world sorted by date!
-Directory format is Month-DD!
+Interesting facts from the [software] testing world sorted by date! We focus
+mostly on people and their achievements.
+
+# License
+
+Text is licensed under
+[Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
+(CC BY-SA 4.0), however individual images have their own copyright and licensing terms.
+See `info.yaml` files in each directory for references!
