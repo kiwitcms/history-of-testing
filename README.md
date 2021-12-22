@@ -3,4 +3,4 @@
 # History of Testing
 
 Interesting facts from the [software] testing world sorted by date!
-Directory format is MM-DD!
+Directory format is Month-DD!
