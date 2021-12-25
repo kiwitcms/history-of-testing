@@ -1,0 +1,15 @@
+title: Kent Beck
+description: |
+    On March 31, 1961 was born Kent Beck.
+    Kent Beck is an American software engineer and the creator of extreme programming,
+    a software development methodology that eschews rigid formal specification for a collaborative and iterative design process. 
+    Beck was one of the 17 original signatories of the Agile Manifesto, the founding document for agile software development. 
+    Extreme and Agile methods are closely associated with Test-Driven Development (TDD), of which Beck is perhaps the leading proponent.
+    Beck pioneered software design patterns, as well as the commercial application of Smalltalk. He wrote the SUnit unit testing framework for Smalltalk, 
+    which spawned the xUnit series of frameworks, notably JUnit for Java, which Beck wrote with Erich Gamma. 
+    Beck popularized CRC cards with Ward Cunningham, the inventor of the wiki.
+url: https://en.wikipedia.org/wiki/Kent_Beck
+images:
+    - filename: Kent_Beck.jpg
+    - license: Creative Commons Attribution-Share Alike 2.0 Generic
+    - source_url: https://commons.wikimedia.org/wiki/File:Kent_Beck_no_Workshop_Mapping_XP.jpg
