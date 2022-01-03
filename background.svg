@@ -26,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -43,9 +43,9 @@
      inkscape:window-height="772"
      id="namedview1004"
      showgrid="false"
-     inkscape:zoom="0.39"
-     inkscape:cx="218.31481"
-     inkscape:cy="464.66484"
+     inkscape:zoom="0.48"
+     inkscape:cx="226.04157"
+     inkscape:cy="334.55571"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -13531,33 +13531,43 @@
          y="1259.4117" /></flowRegion><flowPara
        id="flowPara6842" /></flowRoot>
   <flowRoot
-     transform="translate(1823.3503,196.13212)"
+     transform="translate(1855.3503,196.13212)"
      xml:space="preserve"
      id="flowRoot6844-4"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;opacity:1;mix-blend-mode:normal;fill:#000000;fill-opacity:1;stroke:#ca2026;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"><flowRegion
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;opacity:1;mix-blend-mode:normal;fill:#565656;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"><flowRegion
        id="flowRegion6846-4"
-       style="text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#ca2026;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"><rect
+       style="text-align:start;text-anchor:start;fill:#565656;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"><rect
          id="rect6848-0"
          width="1200"
          height="285.29413"
          x="-1755.8823"
          y="-146.47058"
-         style="text-anchor:start;text-align:start;paint-order:stroke fill markers;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke:#ca2026;stroke-opacity:1;fill:#000000;fill-opacity:1;" /></flowRegion><flowPara
+         style="text-anchor:start;text-align:start;paint-order:stroke fill markers;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke:none;stroke-opacity:1;fill:#565656;fill-opacity:1;" /></flowRegion><flowPara
        id="flowPara6850-3"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:85.3333px;font-family:Signika;-inkscape-font-specification:'Signika Bold';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#ca2026;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers">The History of Testing</flowPara></flowRoot>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:85.3333px;font-family:Signika;-inkscape-font-specification:'Signika Bold';text-align:start;text-anchor:start;fill:#565656;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers">The History of Testing</flowPara></flowRoot>
   <flowRoot
      xml:space="preserve"
      id="flowRoot2316"
      style="font-style:normal;font-weight:normal;font-size:64px;line-height:125%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     transform="translate(684.74428,-79.80392)"><flowRegion
+     transform="translate(479.94319,-79.80392)"><flowRegion
        id="flowRegion2318"
        style="text-align:end;text-anchor:end"><rect
          id="rect2320"
-         width="515.68628"
-         height="143.13725"
+         width="993.92981"
+         height="171.88991"
          x="-478.43137"
          y="214.31372"
-         style="text-align:end;text-anchor:end;" /></flowRegion><flowPara
+         style="text-align:end;text-anchor:end" /></flowRegion><flowPara
        id="flowPara2322"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:Signika;-inkscape-font-specification:'Signika Italic';text-align:center;text-anchor:middle">Image Title</flowPara></flowRoot>
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:Signika;-inkscape-font-specification:'Signika Italic';text-align:center;text-anchor:middle">International Software Testing Day</flowPara></flowRoot>
+  <image
+     sodipodi:absref="/home/senko/history-of-testing/placeholder.png"
+     xlink:href="placeholder.png"
+     width="384"
+     height="384"
+     preserveAspectRatio="none"
+     style="image-rendering:optimizeQuality"
+     id="image2247"
+     x="307.63672"
+     y="241.40866" />
 </svg>
