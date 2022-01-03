@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -e
+
+if [ -z "$1" ]; then
+    echo "USAGE: $0 path/to/info.yaml"
+    exit 1
+fi
+
+FACT_YAML=$1
+TITLE=$(yq -r ".title" $FACT_YAML)
+
+# update title in background image
+sed -i "s/Image Title/$TITLE/" background.svg
+
+# render PNG from SVG
+inkscape \
+    --export-filename=artifact.png \
+    --export-type=png background.svg \
+    --export-width=1200 \
+    --export-height=630
+
+# clean up
+git checkout .
