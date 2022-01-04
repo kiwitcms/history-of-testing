@@ -3,6 +3,12 @@
 Interesting facts from the [software] testing world sorted by date! We focus
 mostly on people and their achievements.
 
+# Contribution Tips
+
+- Image size should be 1200x1200 pixels
+- Preferred background color is `f8f8f8`
+- Preferred source is Wikipedia
+
 # License
 
 Text is licensed under
