@@ -59,6 +59,6 @@ jobs:
             for FILENAME in $(yq -r ".images[].filename" $FACT_YAML); do
                 IMAGE=$FACT_DIR/$FILENAME
                 file $IMAGE
-                file $IMAGE | grep 1200x1200
+                file $IMAGE | egrep "1200x1200|1200 x 1200"
             done
         done
