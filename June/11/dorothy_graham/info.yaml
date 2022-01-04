@@ -11,5 +11,5 @@ description: |
 url: http://www.dorothygraham.co.uk/
 images:
     - filename: dorothy.jpg
-    - license: proprietary
-    - source_url: https://www.stickyminds.com/users/dorothy-graham
+      license: proprietary
+      source_url: https://www.stickyminds.com/users/dorothy-graham

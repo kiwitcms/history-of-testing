@@ -8,5 +8,5 @@ description: |
 url: https://osherove.com/
 images:
     - filename: roy.jpg
-    - license: proprietary
-    - source_url: https://osherove.com/
+      license: proprietary
+      source_url: https://osherove.com/

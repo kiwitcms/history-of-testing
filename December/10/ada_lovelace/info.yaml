@@ -10,5 +10,5 @@ description: |
 url: https://en.wikipedia.org/wiki/Ada_Lovelace
 images:
     - filename: Ada_Lovelace_Chalon_portrait.jpg
-    - license: Public Domain
-    - source_url: https://en.wikipedia.org/wiki/File:Ada_Lovelace_portrait.jpg
+      license: Public Domain
+      source_url: https://en.wikipedia.org/wiki/File:Ada_Lovelace_portrait.jpg
