@@ -35,3 +35,30 @@ jobs:
                 exit 2
             fi
         done
+
+  image_is_1200x1200:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Check for appropriate image size
+      run: |
+        pip install -r requirements.txt
+
+        for FACT_YAML in $(find -name info.yaml); do
+            FACT_DIR=$(dirname $FACT_YAML)
+
+            for FILENAME in $(yq -r ".images[].filename" $FACT_YAML); do
+                IMAGE=$FACT_DIR/$FILENAME
+                file $IMAGE
+                file $IMAGE | grep 1200x1200
+            done
+        done
