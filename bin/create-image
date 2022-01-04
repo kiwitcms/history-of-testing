@@ -8,11 +8,15 @@ if [ -z "$1" ]; then
 fi
 
 FACT_YAML=$1
+FACT_DIR=$(dirname $FACT_YAML)
 TITLE=$(yq -r ".title" $FACT_YAML)
-
+IMAGE=$FACT_DIR/$(yq -r ".images[0].filename" $FACT_YAML)
 
 # update title in background image
 sed -i "s/International Software Testing Day/$TITLE/" background.svg
+
+# replace the linked image filename
+sed -i "s|placeholder.png|$IMAGE|g" background.svg
 
 # render PNG from SVG
 inkscape \
