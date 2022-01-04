@@ -10,5 +10,5 @@ description: |
 url: https://en.wikipedia.org/wiki/Software_bug#History
 images:
     - filename: moth.png
-    - license: Public Domain
-    - source_url: https://commons.wikimedia.org/wiki/File:First_Computer_Bug,_1945.jpg
+      license: Public Domain
+      source_url: https://commons.wikimedia.org/wiki/File:First_Computer_Bug,_1945.jpg
