@@ -23,6 +23,10 @@ jobs:
     - name: Generate daily quote and image
       if: ${{ github.ref == 'refs/heads/master' }}
       run: |
+        # install missing fonts
+        mkdir -p ~/.local/share/fonts
+        cp ./fonts/* ~/.local/share/fonts
+
         pip install -r requirements.txt
         sudo apt-get update
         sudo apt-get -y install inkscape
