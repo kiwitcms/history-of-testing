@@ -24,6 +24,8 @@ jobs:
       if: ${{ github.ref == 'refs/heads/master' }}
       run: |
         pip install -r requirements.txt
+        sudo apt-get update
+        sudo apt-get -y install inkscape
 
         ./bin/daily-quote
 
