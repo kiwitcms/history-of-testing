@@ -4,8 +4,6 @@ set -e
 
 PREFIX="$(date +%B/%d)/"
 
-PREFIX="Debug/33/"
-
 if [ ! -d "$PREFIX" ]; then
     echo "INFO: Artifact directory $PREFIX not found. Nothing to do. Exiting."
     exit 0
