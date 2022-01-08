@@ -27,11 +27,12 @@ fi
 
 echo "DEBUG: ARTIFACT_PATH=$ARTIFACT_PATH"
 
+FACT_YAML="$ARTIFACT_PATH/info.yaml"
+
 # will exit if we get an error here
-./bin/create-image $ARTIFACT_PATH
+./bin/create-image $FACT_YAML
 
 IMAGE="artifact.png"
-FACT_YAML="$ARTIFACT_PATH/info.yaml"
 DESCRIPTION=$(yq -r ".description" $FACT_YAML)
 SOURCE_URL=$(yq -r ".url" $FACT_YAML)
 REPO_URL="https://github.com/kiwitcms/history-of-testing"
