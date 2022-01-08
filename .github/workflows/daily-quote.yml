@@ -27,6 +27,13 @@ jobs:
         sudo apt-get update
         sudo apt-get -y install inkscape
 
+        inkscape --version
+
+        # Ubuntu version of Inkscape is older than in Fedora and
+        # cli options are different
+        sed -i "s/export-filename/export-png/" ./bin/create-image
+        sed -i "s/--export-type=png//" ./bin/create-image
+
         ./bin/daily-quote
 
     - name: Upload image
