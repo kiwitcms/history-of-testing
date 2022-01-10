@@ -6,7 +6,7 @@ PREFIX="$(date +%B/%d)/"
 
 if [ ! -d "$PREFIX" ]; then
     echo "INFO: Artifact directory $PREFIX not found. Nothing to do. Exiting."
-    exit 0
+    exit 1
 fi
 
 
