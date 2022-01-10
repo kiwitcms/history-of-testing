@@ -37,12 +37,14 @@ if [[ -n "${AWS_ACCESS_KEY_ID:-}" && -n "${AWS_SECRET_ACCESS_KEY:-}" ]]; then
     IMAGE_URL="http://history-of-testing.s3.amazonaws.com/$ARTIFACT_PATH/$IMAGE"
 fi
 
-DESCRIPTION=$(yq -r ".description" $FACT_YAML)
+DESCRIPTION=$(yq -r ".description" $FACT_YAML | tr -s "\n" " ")
+SHORT_DESCRIPTION=$(yq -r ".description" $FACT_YAML | tr -s "\n" " " | cut -f1 -d".")
 SOURCE_URL=$(yq -r ".url" $FACT_YAML)
 REPO_URL="https://github.com/kiwitcms/history-of-testing"
 
 FULL_DESCRIPTION=$(cat <<__EOT__
 $DESCRIPTION
+
 Source: $SOURCE_URL
 Contribute: $REPO_URL
 __EOT__
@@ -51,3 +53,14 @@ __EOT__
 echo
 echo
 echo "$FULL_DESCRIPTION"
+
+TWITTER_DESCRIPTION=$(cat <<__EOT__
+$SHORT_DESCRIPTION. #HistoryOfTesting
+Source: $SOURCE_URL
+Contribute: $REPO_URL
+__EOT__
+)
+
+echo
+echo
+echo "$TWITTER_DESCRIPTION"
