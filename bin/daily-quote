@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -eu
 
 PREFIX="$(date +%B/%d)/"
 
@@ -31,6 +31,12 @@ FACT_YAML="$ARTIFACT_PATH/info.yaml"
 ./bin/create-image $FACT_YAML
 
 IMAGE="artifact.png"
+
+if [[ -n "${AWS_ACCESS_KEY_ID:-}" && -n "${AWS_SECRET_ACCESS_KEY:-}" ]]; then
+    s3cmd --acl-public put $IMAGE s3://history-of-testing/$ARTIFACT_PATH/$IMAGE
+    IMAGE_URL="http://history-of-testing.s3.amazonaws.com/$ARTIFACT_PATH/$IMAGE"
+fi
+
 DESCRIPTION=$(yq -r ".description" $FACT_YAML)
 SOURCE_URL=$(yq -r ".url" $FACT_YAML)
 REPO_URL="https://github.com/kiwitcms/history-of-testing"
