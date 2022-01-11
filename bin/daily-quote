@@ -32,9 +32,19 @@ FACT_YAML="$ARTIFACT_PATH/info.yaml"
 
 IMAGE="artifact.png"
 
+# build a short video from image
+for i in $(seq 25); do
+    cp $IMAGE artifact-$i.png;
+done
+VIDEO="artifact.mp4"
+ffmpeg -framerate 1 -i artifact-%d.png $VIDEO
+
 if [[ -n "${AWS_ACCESS_KEY_ID:-}" && -n "${AWS_SECRET_ACCESS_KEY:-}" ]]; then
     s3cmd --acl-public put $IMAGE s3://history-of-testing/$ARTIFACT_PATH/$IMAGE
     IMAGE_URL="http://history-of-testing.s3.amazonaws.com/$ARTIFACT_PATH/$IMAGE"
+
+    s3cmd --acl-public put $VIDEO s3://history-of-testing/$ARTIFACT_PATH/$VIDEO
+    VIDEO_URL="http://history-of-testing.s3.amazonaws.com/$ARTIFACT_PATH/$VIDEO"
 fi
 
 DESCRIPTION=$(yq -r ".description" $FACT_YAML | tr -s "\n" " ")
@@ -73,3 +83,8 @@ echo
 echo
 
 # post to YouTube
+curl \
+    -H "Authorization: Bearer $AYRSHARE_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"youtube\"], \"mediaUrls\": [\"$VIDEO_URL\"], \"youTubeOptions\": {\"title\": \"$SHORT_DESCRIPTION\", \"youTubeVisibility\": \"public\"}}" \
+    -X POST https://app.ayrshare.com/api/post
