@@ -51,3 +51,25 @@ TWITTER_DESCRIPTION="$SHORT_DESCRIPTION. #HistoryOfTesting\nSource: $SOURCE_URL\
 echo
 echo
 echo "$TWITTER_DESCRIPTION"
+
+# post to Facebook and LinkedIn
+curl \
+    -H "Authorization: Bearer $AYRSHARE_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"facebook\", \"linkedin\"], \"mediaUrls\": [\"$IMAGE_URL\"]}" \
+    -X POST https://app.ayrshare.com/api/post
+
+echo
+echo
+
+# post to Twitter
+curl \
+    -H "Authorization: Bearer $AYRSHARE_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d "{\"post\": \"$TWITTER_DESCRIPTION\", \"platforms\": [\"twitter\"], \"mediaUrls\": [\"$IMAGE_URL\"]}" \
+    -X POST https://app.ayrshare.com/api/post
+
+echo
+echo
+
+# post to YouTube
