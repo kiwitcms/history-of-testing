@@ -37,7 +37,11 @@ for i in $(seq 1500); do
     cp $IMAGE artifact-$i.png;
 done
 VIDEO="artifact.mp4"
-ffmpeg -framerate 60 -i artifact-%d.png $VIDEO
+ffmpeg -framerate 60 -i artifact-%d.png fact.mp4
+
+ffmpeg -i fact.mp4 -i subscribe.mp4 \
+    -filter_complex '[1:v]colorkey=color=0x00FF00:similarity=0.25:blend=0.25[ckout];[0:v][ckout]overlay[out]' \
+    -map '[out]' $VIDEO
 
 if [[ -n "${AWS_ACCESS_KEY_ID:-}" && -n "${AWS_SECRET_ACCESS_KEY:-}" ]]; then
     s3cmd --acl-public put $IMAGE s3://history-of-testing/$ARTIFACT_PATH/$IMAGE
