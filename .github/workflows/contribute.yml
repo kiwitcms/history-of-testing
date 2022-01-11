@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       title:
-        description: 'Title of this artifact, usually name of a person'
+        description: 'Artifact title, usually a person name'
         required: true
       description:
         description: 'Short description about this person.'
         required: true
         default: 'On Month DD, YYYY was born John Doe. He is an American ....'
       url:
-        description: 'URL for more information. Preferably Wikipedia'
+        description: 'URL for more info. Prefer Wikipedia'
         required: true
       image_file:
         description: 'URL to an image file'
@@ -21,7 +21,7 @@ on:
         required: true
         default: 'proprietary'
       image_source_url:
-        description: 'URL to the page where <image_file> was displayed'
+        description: 'Page URL where <image_file> is displayed'
         required: true
 
 jobs:
