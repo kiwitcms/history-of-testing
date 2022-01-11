@@ -33,11 +33,11 @@ FACT_YAML="$ARTIFACT_PATH/info.yaml"
 IMAGE="artifact.png"
 
 # build a short video from image
-for i in $(seq 25); do
+for i in $(seq 1500); do
     cp $IMAGE artifact-$i.png;
 done
 VIDEO="artifact.mp4"
-ffmpeg -framerate 1 -i artifact-%d.png $VIDEO
+ffmpeg -framerate 60 -i artifact-%d.png $VIDEO
 
 if [[ -n "${AWS_ACCESS_KEY_ID:-}" && -n "${AWS_SECRET_ACCESS_KEY:-}" ]]; then
     s3cmd --acl-public put $IMAGE s3://history-of-testing/$ARTIFACT_PATH/$IMAGE
