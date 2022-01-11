@@ -1,0 +1,41 @@
+name: contribute
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: 'Title of this artifact, usually name of a person'
+        required: true
+      description:
+        description: 'Short description about this person.'
+        required: true
+        default: 'On Month DD, YYYY was born John Doe. He is an American ....'
+      url:
+        description: 'URL for more information. Preferably Wikipedia'
+        required: true
+      image_file:
+        description: 'URL to an image file'
+        required: true
+      image_license:
+        description: 'Image license. Preferably Creative Commons or Public Domain'
+        required: true
+        default: 'proprietary'
+      image_source_url:
+        description: 'URL to the page where <image_file> was displayed'
+        required: true
+
+jobs:
+  contribute:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2.3.1
+      with:
+        python-version: 3.8
+
+    - name: Generate daily quote and image
+      run: |
+        # install missing fonts
+        echo "TODO"
