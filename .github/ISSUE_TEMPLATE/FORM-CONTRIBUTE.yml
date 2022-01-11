@@ -1,0 +1,52 @@
+name: Contribute an artifact to History of Testing
+description: interactive session with out bot!
+title: 'Add artifact about ...'
+labels: ['let-me-contribute']
+assignees:
+  - kiwitcms-bot
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title for this artifact
+      placeholder: ex. John Doe
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description about this person
+      placeholder: On Month DD, YYYY was born John Doe. He is an American ...
+    validations:
+      required: true
+
+  - type: input
+    id: source_url
+    attributes:
+      label: URL for more information
+      description: preferably Wikipedia
+    validations:
+      required: true
+
+  - type: input
+    id: image_file
+    attributes:
+      label: URL to an image file
+    validations:
+      required: true
+
+  - type: input
+    id: image_license
+    attributes:
+      label: Image license. Preferably Creative Commons or Public Domain
+      placeholder: proprietary
+    validations:
+      required: true
+
+  - type: input
+    id: image_source_url
+    attributes:
+      label: Page URL where <image_file> is displayed
+    validations:
+      required: true
