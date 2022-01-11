@@ -12,5 +12,4 @@ jobs:
     - name: Generate daily quote and image
       if: ${{ github.event.label.name }} == 'let-me-contribute' and ${{ github.event.assignee.login }} == 'kiwitcms-bot'
       run: |
-        echo "Sender is: ", ${{ github.event.sender.login }}
-        echo "GitHub bot should add a comment to the issue"
+        echo "DEBUG: event", ${{ github.event.issue }}
