@@ -47,5 +47,5 @@ jobs:
       uses: actions/upload-artifact@v2
       if: ${{ success() }}
       with:
-        name: artifact.png
-        path: artifact.png
+        name: artifacts
+        path: artifact.*
