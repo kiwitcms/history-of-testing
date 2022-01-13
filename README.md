@@ -5,7 +5,7 @@ mostly on people and their achievements.
 
 # Contribution Tips
 
-- Image size should be 1200x1200 pixels
+- Image size should be 600x600 pixels
 - Preferred background color is `f8f8f8`
 - Preferred source is Wikipedia
 
