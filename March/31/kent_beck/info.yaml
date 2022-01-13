@@ -1,13 +1,13 @@
 title: Kent Beck
 description: |
     On March 31, 1961 was born Kent Beck.
-    Kent Beck is an American software engineer and the creator of extreme programming.
-    He is the founder and director of Three Rivers Institute (TRI) and one of the 17 original signatories of the Agile Manifesto.
-    Beck specialities are software process, agile development, incremental design,
-    test-driven development, the insurance industry and social media.
-    Beck is the author/co-author of Implementation Patterns, Extreme Programming Explained: Embrace Change 2nd Edition, Contributing to Eclipse, 
-    Test-Driven Development: By Example, Planning Extreme Programming, Smalltalk Best Practice Patterns, and the JUnit Pocket Guide.
-    
+    He is an American software engineer and the creator of extreme programming.
+    Beck was one of the 17 original signatories of the Agile Manifesto.
+    Extreme and Agile methods are closely associated with Test-Driven Development (TDD),
+    of which Beck is perhaps the leading proponent.
+    He wrote the SUnit unit testing framework for Smalltalk,
+    which spawned the xUnit series of frameworks, notably JUnit for Java,
+    which Beck wrote with Erich Gamma.
 url: https://en.wikipedia.org/wiki/Kent_Beck
 images:
     - filename: Kent_Beck.jpg
