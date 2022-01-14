@@ -1,0 +1,15 @@
+title: Glenford Myers
+description: |
+    On December 12, 1946 was born Glenford J. Myers.
+    He is an American computer scientist, entrepreneur, and author.
+    In 1979 Glenford introduced the separation of debugging from testing
+    in his book The Art of Software Testing.
+    Although his attention was on breakage testing, i.e. discovering errors,
+    this illustrated the desire of the software engineering community to
+    separate fundamental development activities, such as debugging,
+    from that of verification.
+url: https://en.wikipedia.org/wiki/Glenford_Myers
+images:
+    - filename: glenford-myers.png
+      license: proprietary
+      source_url: https://www.yegor256.com/2014/08/22/art-of-software-testing.html
