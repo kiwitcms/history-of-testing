@@ -1,11 +1,15 @@
 title: Grace Hopper
 description: |
     On December 09, 1906 was born Grace Brewster Murray Hopper.
-    She is an American computer scientist and United States Navy rear admiral.
-    Hopper earned a Ph.D. (1934) in mathematics from Yale and she best known for her trailblazing contributions to computer programming, software development, 
+    She is an American computer scientist and United States Navy rear admiral best known for
+    her trailblazing contributions to computer programming, software development,
     and the design and implementation of programming languages.
-    Hopper is credited with popularizing the term "debugging" and "bug", as during her team work on Harvard Mark II computer, her associates discovered a moth that was stuck in a relay 
-    and was impeding the operation of the computer. Upon extraction, the insect was affixed to a log sheet for that day with the notation, "First actual case of a bug being found".
+    Hopper developed the implementation of standards for testing computer systems and
+    components, most significantly for early programming languages such as FORTRAN and COBOL.
+    The Navy tests for conformance to these standards led to significant convergence among
+    the programming language dialects of the major computer vendors. In the 1980s,
+    these tests were assumed by the National Bureau of Standards,
+    known today as the National Institute of Standards and Technology.
 url: https://en.wikipedia.org/wiki/Grace_Hopper
 images:
     - filename: grace_hopper.jpg
