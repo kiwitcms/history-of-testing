@@ -1,0 +1,51 @@
+name: daily-quote
+
+on:
+  workflow_dispatch:
+  # https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#scheduled-events
+  schedule:
+    - cron: '45 11 * * *' # 11:45 UTC
+
+jobs:
+  daily_quote:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2.3.1
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Generate daily quote and image
+      if: ${{ github.ref == 'refs/heads/master' }}
+      run: |
+        # install missing fonts
+        mkdir -p ~/.local/share/fonts
+        cp ./fonts/* ~/.local/share/fonts
+
+        pip install -r requirements.txt
+        sudo apt-get update
+        sudo apt-get -y install inkscape s3cmd ffmpeg
+
+        inkscape --version
+
+        # Ubuntu version of Inkscape is older than in Fedora and
+        # cli options are different
+        sed -i "s/export-filename/export-png/" ./bin/create-image
+        sed -i "s/--export-type=png//" ./bin/create-image
+
+        export AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
+        export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        export AYRSHARE_API_KEY=${{ secrets.AYRSHARE_API_KEY }}
+        ./bin/daily-quote
+
+    - name: Upload image
+      uses: actions/upload-artifact@v2
+      if: ${{ success() }}
+      with:
+        name: artifacts
+        path: artifact.*

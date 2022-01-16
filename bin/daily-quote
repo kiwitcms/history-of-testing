@@ -1,0 +1,94 @@
+#!/bin/bash
+
+set -eu
+
+PREFIX="$(date +%B/%d)/"
+
+if [ ! -d "$PREFIX" ]; then
+    echo "INFO: Artifact directory $PREFIX not found. Nothing to do. Exiting."
+    exit 1
+fi
+
+
+ARTIFACT_COUNT=$(find "$PREFIX" -mindepth 1 -maxdepth 1 -type d | wc -l)
+ARTIFACT_DIRS=($(find "$PREFIX" -mindepth 1 -maxdepth 1 -type d))
+
+echo "DEBUG: ARTIFACT_DIRS=${ARTIFACT_DIRS[@]}"
+
+if [ "$ARTIFACT_COUNT" == "1" ]; then
+    ARTIFACT_PATH=${ARTIFACT_DIRS[0]}
+else
+    YEAR=$(date +%y | cut -c2)
+    INDEX=$(expr $YEAR % $ARTIFACT_COUNT)
+    ARTIFACT_PATH="${ARTIFACT_DIRS[$INDEX]}"
+fi
+
+echo "DEBUG: ARTIFACT_PATH=$ARTIFACT_PATH"
+
+FACT_YAML="$ARTIFACT_PATH/info.yaml"
+
+# will exit if we get an error here
+./bin/create-image $FACT_YAML
+
+IMAGE="artifact.png"
+
+# build a short video from image
+for i in $(seq 1500); do
+    cp $IMAGE artifact-$i.png;
+done
+VIDEO="artifact.mp4"
+ffmpeg -framerate 60 -i artifact-%d.png fact.mp4
+
+ffmpeg -i fact.mp4 -i subscribe.mp4 \
+    -filter_complex '[1:v]colorkey=color=0x00FF00:similarity=0.25:blend=0.25[ckout];[0:v][ckout]overlay[out]' \
+    -map '[out]' $VIDEO
+
+if [[ -n "${AWS_ACCESS_KEY_ID:-}" && -n "${AWS_SECRET_ACCESS_KEY:-}" ]]; then
+    s3cmd --acl-public put $IMAGE s3://history-of-testing/$ARTIFACT_PATH/$IMAGE
+    IMAGE_URL="http://history-of-testing.s3.amazonaws.com/$ARTIFACT_PATH/$IMAGE"
+
+    s3cmd --acl-public put $VIDEO s3://history-of-testing/$ARTIFACT_PATH/$VIDEO
+    VIDEO_URL="http://history-of-testing.s3.amazonaws.com/$ARTIFACT_PATH/$VIDEO"
+fi
+
+DESCRIPTION=$(yq -r ".description" $FACT_YAML | tr -s "\n" " ")
+SHORT_DESCRIPTION=$(yq -r ".description" $FACT_YAML | tr -s "\n" " " | cut -f1 -d".")
+SOURCE_URL=$(yq -r ".url" $FACT_YAML)
+REPO_URL="https://github.com/kiwitcms/history-of-testing"
+
+FULL_DESCRIPTION="$DESCRIPTION #HistoryOfTesting\n\nSource: $SOURCE_URL\nContribute: $REPO_URL"
+echo
+echo
+echo "$FULL_DESCRIPTION"
+
+TWITTER_DESCRIPTION="$SHORT_DESCRIPTION. #HistoryOfTesting\nSource: $SOURCE_URL\nContribute: $REPO_URL"
+echo
+echo
+echo "$TWITTER_DESCRIPTION"
+
+# post to Facebook and LinkedIn
+curl \
+    -H "Authorization: Bearer $AYRSHARE_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"facebook\", \"linkedin\"], \"mediaUrls\": [\"$IMAGE_URL\"]}" \
+    -X POST https://app.ayrshare.com/api/post
+
+echo
+echo
+
+# post to Twitter
+curl \
+    -H "Authorization: Bearer $AYRSHARE_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d "{\"post\": \"$TWITTER_DESCRIPTION\", \"platforms\": [\"twitter\"], \"mediaUrls\": [\"$IMAGE_URL\"]}" \
+    -X POST https://app.ayrshare.com/api/post
+
+echo
+echo
+
+# post to YouTube
+curl \
+    -H "Authorization: Bearer $AYRSHARE_API_KEY" \
+    -H "Content-Type: application/json" \
+    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"youtube\"], \"mediaUrls\": [\"$VIDEO_URL\"], \"youTubeOptions\": {\"title\": \"$SHORT_DESCRIPTION\", \"youTubeVisibility\": \"public\"}}" \
+    -X POST https://app.ayrshare.com/api/post

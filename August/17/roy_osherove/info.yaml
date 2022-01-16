@@ -1,4 +1,4 @@
-title: 
+title: Roy Osherove
 description: |
     On August 17, 1975 was born Roy Osherove. He is the organizer of the
     CD/XP Israel meetup group and has been working in the software industry
@@ -8,5 +8,5 @@ description: |
 url: https://osherove.com/
 images:
     - filename: roy.jpg
-    - license: proprietary
-    - source_url: https://osherove.com/
+      license: proprietary
+      source_url: https://www.youtube.com/watch?v=sSdMcqxkEdo

@@ -1,0 +1,14 @@
+title: Ada Lovelace
+description: |
+    On December 10, 1815 was born Augusta Ada Byron, later
+    Augusta Ada King, Countess of Lovelace. She was an English mathematician
+    and writer, chiefly known for her work on Charles Babbage's proposed
+    mechanical general-purpose computer.
+    The concept that software might contain errors dates back to Ada's 1843 notes
+    on the Analytical Engine, in which she speaks of the possibility of program
+    "cards" being erroneous.
+url: https://en.wikipedia.org/wiki/Ada_Lovelace
+images:
+    - filename: Ada_Lovelace_Chalon_portrait.jpg
+      license: Public Domain
+      source_url: https://en.wikipedia.org/wiki/File:Ada_Lovelace_portrait.jpg

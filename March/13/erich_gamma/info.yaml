@@ -1,0 +1,13 @@
+title: Erich Gamma
+description: |
+    On March 13, 1961 was born Erich Gamma.
+    He is a Swiss computer scientist and one of the four co-authors
+    of the software engineering textbook,
+    Design Patterns: Elements of Reusable Object-Oriented Software.
+    Together with Kent Beck he co-wrote the JUnit software testing
+    framework which helped create Test-Driven Development.
+url: https://en.wikipedia.org/wiki/Erich_Gamma
+images:
+    - filename: erich-gamma.jpg
+      license: proprietary
+      source_url: https://devxconf.org/speakers/erich-gamma.jpg

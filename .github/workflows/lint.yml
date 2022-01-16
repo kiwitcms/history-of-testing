@@ -1,0 +1,64 @@
+name: lint
+
+on:
+  push:
+    branches: master
+  pull_request:
+
+jobs:
+  title_is_not_empty:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2.3.1
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Check for empty title in Yaml
+      run: |
+        pip install -r requirements.txt
+
+        for FACT_YAML in $(find -name info.yaml); do
+            TITLE=$(yq -r ".title" $FACT_YAML)
+            if [ -z "$TITLE" ]; then
+                echo "FAIL: Empty title in $FACT_YAML"
+                exit 1
+            fi
+
+            if [ "$TITLE" == "null" ]; then
+                echo "FAIL: Empty title in $FACT_YAML"
+                exit 2
+            fi
+        done
+
+  image_is_600x600:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2.3.1
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Check for appropriate image size
+      run: |
+        pip install -r requirements.txt
+
+        for FACT_YAML in $(find -name info.yaml); do
+            FACT_DIR=$(dirname $FACT_YAML)
+
+            for FILENAME in $(yq -r ".images[].filename" $FACT_YAML); do
+                IMAGE=$FACT_DIR/$FILENAME
+                file $IMAGE
+                file $IMAGE | egrep "600x600|600 x 600"
+            done
+        done

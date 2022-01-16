@@ -1,0 +1,29 @@
+#!/bin/bash
+
+set -e
+
+if [ -z "$1" ]; then
+    echo "USAGE: $0 path/to/info.yaml"
+    exit 1
+fi
+
+FACT_YAML=$1
+FACT_DIR=$(dirname $FACT_YAML)
+TITLE=$(yq -r ".title" $FACT_YAML)
+IMAGE=$FACT_DIR/$(yq -r ".images[0].filename" $FACT_YAML)
+
+# update title in background image
+sed -i "s/International Software Testing Day/$TITLE/" background.svg
+
+# replace the linked image filename
+sed -i "s|placeholder.png|$IMAGE|g" background.svg
+
+# render PNG from SVG
+inkscape \
+    --export-filename=artifact.png \
+    --export-type=png background.svg \
+    --export-width=1200 \
+    --export-height=630
+
+# clean up
+git checkout .

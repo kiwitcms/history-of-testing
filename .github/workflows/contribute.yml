@@ -1,0 +1,15 @@
+name: contribute
+
+on:
+    issues:
+      types: [opened]
+
+jobs:
+  contribute:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Generate daily quote and image
+      if: ${{ github.event.label.name }} == 'let-me-contribute' and ${{ github.event.assignee.login }} == 'kiwitcms-bot'
+      run: |
+        echo "DEBUG: event", ${{ github.event.issue }}
