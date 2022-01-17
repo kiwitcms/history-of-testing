@@ -1,2 +1,5 @@
 name: Generic issue
 description: 'open a generic issue'
+body:
+  - type: markdown
+    value: ""
