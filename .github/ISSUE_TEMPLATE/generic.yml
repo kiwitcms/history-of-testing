@@ -1,0 +1,6 @@
+name: Generic issue
+description: 'open a generic issue'
+body:
+  - type: textarea
+    attributes:
+      label: "What's wrong?"
