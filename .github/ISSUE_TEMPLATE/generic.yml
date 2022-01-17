@@ -1,7 +1,6 @@
 name: Generic issue
 description: 'open a generic issue'
 body:
-  - type: markdown
+  - type: textarea
     attributes:
-      value: |
-        Describe what happened!
+      label: "What's wrong?"
