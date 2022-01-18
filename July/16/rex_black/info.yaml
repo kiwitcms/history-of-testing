@@ -1,0 +1,12 @@
+title: Rex Black
+description: |
+    On July 16, 1964 was born Rex Black. Rex Black is President of RBCS, a leader in software, hardware, and systems testing. 
+    He is Founder and past President of the ISTQB and of the ASTQB, a past Chair, Co-author, Editor, 
+    and Project Manager for many of the ISTQB syllabi, and Founder and President of TMMi America.
+    Black is author of several software testing books and his popular first book, Managing the Testing Process, has sold over 50,000 copies around the world, 
+    including Japanese, Chinese, and Indian releases, and is now in its third edition.
+url: https://en.wikipedia.org/wiki/Rex_Black
+images:
+    - filename: rex_black.png
+      license: proprietary
+      source_url: https://career.luxoft.com/lts-webinars/using-pairwise-testing/
