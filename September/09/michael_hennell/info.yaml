@@ -1,11 +1,13 @@
 title: Michael Hennell
 description: |
     On September 09, 1940 was born Michael Hennell.
-    He is a British computer scientist and was a Professor of Mathematical Sciences, 
+    He is a British computer scientist and was a Professor of Mathematical Sciences,
     University of Liverpool in England.
-    Hennell was a member of the editorial board of the journal Software Testing, Verification and Reliability (STVR).
-    He founded Liverpool Data Research Associates Ltd. (LDRA) to commercialize 
-    the software test-bed designed to analyse numerical software.
+    Assessing the quality of the mathematical libraries on which his initial research depended
+    lead Professor Hennell into the world of Software testing,
+    specifically in the use of Static code analysis for quantifying the effectiveness of test data,
+    which led to the development of the Linear Code Sequence and Jump concept.
+    Hennell was also a member of the editorial board of the journal Software Testing, Verification and Reliability (STVR).
 url: https://en.wikipedia.org/wiki/Michael_Hennell
 images:
     - filename: michael_hennell.jpg
