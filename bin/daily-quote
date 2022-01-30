@@ -70,7 +70,7 @@ echo "$TWITTER_DESCRIPTION"
 curl \
     -H "Authorization: Bearer $AYRSHARE_API_KEY" \
     -H "Content-Type: application/json" \
-    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"facebook\", \"linkedin\"], \"mediaUrls\": [\"$IMAGE_URL\"]}" \
+    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"facebook\", \"linkedin\"], \"mediaUrls\": [\"$IMAGE_URL\"], \"shortenLinks\": \"false\"}" \
     -X POST https://app.ayrshare.com/api/post
 
 echo
@@ -80,7 +80,7 @@ echo
 curl \
     -H "Authorization: Bearer $AYRSHARE_API_KEY" \
     -H "Content-Type: application/json" \
-    -d "{\"post\": \"$TWITTER_DESCRIPTION\", \"platforms\": [\"twitter\"], \"mediaUrls\": [\"$IMAGE_URL\"]}" \
+    -d "{\"post\": \"$TWITTER_DESCRIPTION\", \"platforms\": [\"twitter\"], \"mediaUrls\": [\"$IMAGE_URL\"], \"shortenLinks\": \"false\"}" \
     -X POST https://app.ayrshare.com/api/post
 
 echo
@@ -90,5 +90,5 @@ echo
 curl \
     -H "Authorization: Bearer $AYRSHARE_API_KEY" \
     -H "Content-Type: application/json" \
-    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"youtube\"], \"mediaUrls\": [\"$VIDEO_URL\"], \"youTubeOptions\": {\"title\": \"$SHORT_DESCRIPTION\", \"youTubeVisibility\": \"public\"}}" \
+    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"youtube\"], \"mediaUrls\": [\"$VIDEO_URL\"], \"youTubeOptions\": {\"title\": \"$SHORT_DESCRIPTION\", \"youTubeVisibility\": \"public\"}, \"shortenLinks\": \"false\"}" \
     -X POST https://app.ayrshare.com/api/post
