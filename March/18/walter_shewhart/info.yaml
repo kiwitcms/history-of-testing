@@ -1,0 +1,14 @@
+title: Walter A. Shewhart
+description: |
+    On March 18, 1891 was born Walter Andrew Shewhart.
+    He was an American physicist, engineer and statistician,
+    sometimes known as the father of statistical quality control.
+    In his second book 'Statistical Method from the Viewpoint of Quality Control'
+    Walter publishes his Scientific Method of Improvement known as the Shewhart Cycle;
+    This is three step cycle constituting a dynamic scientific process of acquiring knowledge.
+    William Deming later popularizes the method as the Plan-Do-Check-Act method.
+url: https://en.wikipedia.org/wiki/Walter_A._Shewhart
+images:
+    - filename: walter_shewhart.jpg
+      license: Public Domain
+      source_url: https://commons.wikimedia.org/wiki/File:WAShewhart.jpg
