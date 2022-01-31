@@ -1,0 +1,13 @@
+title: Alan Turing
+description: |
+    On June 23, 1912 was born Alan Turing.
+    He was an English mathematician, computer scientist, logician, cryptanalyst,
+    philosopher, and theoretical biologist.
+    In his paper 'Checking a large routine', Turing describes how
+    to verify the correctness of a program that calculates the factorial function
+    in the sense of making sure that it is right.
+url: https://en.wikipedia.org/wiki/Alan_Turing
+images:
+    - filename: alan_turing.jpg
+      license: Unknown
+      source_url: https://commons.wikimedia.org/wiki/File:Alan_Turing_Aged_16.jpg
