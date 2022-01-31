@@ -1,0 +1,15 @@
+title: Tony Hoare
+description: |
+    On January 11, 1934 was born Sir Charles Antony Richard Hoare.
+    He is a British computer scientist who has made foundational contributions
+    to programming languages, algorithms, operating systems, formal verification,
+    and concurrent computing.
+    In 1969 Tony Hoare developed the Hoare logic, an axiomatic basis for verifying program
+    correctness.
+    In 2009, Tony Hoare apologized for inventing the null pointer
+    which has led to innumerable errors, vulnerabilities, and system crashes over the years.
+url: https://en.wikipedia.org/wiki/Tony_Hoare
+images:
+    - filename: tony_hoare.jpg
+      license: Creative Commons Attribution-Share Alike 2.0 France
+      source_url: https://commons.wikimedia.org/wiki/File:Sir_Tony_Hoare_IMG_5125.jpg
