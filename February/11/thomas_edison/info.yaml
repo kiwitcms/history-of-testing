@@ -1,0 +1,15 @@
+title: Thomas Edison
+description: |
+    On February 11, 1847 was born Thomas Alva Edison.
+    He was an American inventor and businessman.
+    Using the term 'bug' to describe a flaw in a system is
+    widely attributed to Edison because he used it in a letter
+    to Theodore Puskas.
+    According to other sources the term bug was already commonly used to
+    describe systems faults in Edison's time.
+
+url: https://en.wikipedia.org/wiki/Thomas_Edison
+images:
+    - filename: thomas_edison.jpg
+      license: Public Domain
+      source_url: https://en.wikipedia.org/wiki/File:Thomas_Edison2.jpg
