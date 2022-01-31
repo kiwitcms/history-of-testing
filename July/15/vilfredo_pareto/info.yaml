@@ -1,0 +1,13 @@
+title: Vilfredo Pareto
+description: |
+    On July 15, 1848 was born Wilfried Fritz Pareto.
+    He was an Italian civil engineer, sociologist, economist, political scientist, and philosopher.
+    Vilfredo introduced the Pareto Principle which is often interpreted in testing as
+    '80% of the bugs are found by only 20% of the test cases' or
+    '20% of efforts bring 80% of results'. This often serves as the basis
+    of planning test executions and prioritizing resources.
+url: https://en.wikipedia.org/wiki/Vilfredo_Pareto
+images:
+    - filename: vilfredo_pareto.jpg
+      license: Public Domain
+      source_url: https://commons.wikimedia.org/wiki/File:Vilfredo_Pareto_1870s2.jpg
