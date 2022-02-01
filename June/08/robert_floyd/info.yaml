@@ -1,0 +1,12 @@
+title: Robert W. Floyd
+description: |
+    On June 8, 1936 was born Robert W Floyd.
+    He was an American computer scientist and early pioneer in the field
+    of program verification using logical assertions with his 1967 paper
+    'Assigning Meanings to Programs'. This work would later be refined
+    and became known as Hoare logic.
+url: https://en.wikipedia.org/wiki/Robert_W._Floyd
+images:
+    - filename: robert_floyd.jpg
+      license: Unknown
+      source_url: https://en.wikipedia.org/wiki/File:Robert_W._Floyd.jpg
