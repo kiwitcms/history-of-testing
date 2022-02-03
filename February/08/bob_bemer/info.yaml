@@ -1,0 +1,16 @@
+title: Bob Bemer
+description: |
+    On February 8, 1920 was born Robert William Bemer.
+    He was an American computer scientist best known for his work at IBM
+    and one of the earliest proponents of the software factory concept.
+    Bob's paper
+    'Checklist for planning software system production' contains a
+    chapter on quality assurance. One of the questions is
+    'Is the product tested to ensure that it is the most useful for the
+    customer in addition to matching functional specifications?'.
+
+url: https://en.wikipedia.org/wiki/Bob_Bemer
+images:
+    - filename: bob_bemer.jpg
+      license: proprietary
+      source_url: https://www.nbcnews.com/id/wbna5280665
