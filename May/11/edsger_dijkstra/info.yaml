@@ -1,0 +1,16 @@
+title: Edsger Dijkstra
+description: |
+    On May 11, 1930 was born Edsger Dijkstra.
+    He was a Dutch pioneer in computing science.
+    One of Dijkstra's famous quotes is
+    'Testing shows the presence, not the absence of bugs'.
+    He also criticizes the excessive use of the GOTO statement
+    because it complicates the task of analyzing and verifying the correctness of programs.
+    In his lecture 'The Humble Programmer' Dijkstra states
+    'One should not first make the program and then prove its correctness,
+    because then the requirement of providing the proof would only increase the burden'.
+url: https://en.wikipedia.org/wiki/Edsger_W._Dijkstra
+images:
+    - filename: dijkstra.jpg
+      license: may be used by anyone for any purpose
+      source_url: https://commons.wikimedia.org/wiki/File:Edsger_Wybe_Dijkstra.jpg
