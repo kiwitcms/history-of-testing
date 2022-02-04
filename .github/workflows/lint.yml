@@ -56,7 +56,7 @@ jobs:
         for FACT_YAML in $(find -name info.yaml); do
             REMAINDER=$(yq -r ".description" $FACT_YAML | head -n1 | cut -f2 -d.)
             if [ -n "$REMAINDER" ]; then
-                echo "FAIL: First line in $FACT_YAML's `description` contains >1 dots or the sentence is split into more lines!"
+                echo "FAIL: First line in $FACT_YAML's 'description' contains >1 dots or the sentence is split into more lines!"
                 echo "TODO: Make sure that the 1st sentence is of the format 'On Month DD, YYYY was born First Last.'"
                 echo "TODO: - it should finish with a dot (.) and nothing else afterwards"
                 echo "TODO: - names should not be abbreviated, e.g. 'John M. Doe' is not allowed b/c it breaks automation"
