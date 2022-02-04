@@ -1,0 +1,14 @@
+title: Alan Perlis
+description: |
+    On April 1, 1922 was born Alan Jay Perlis.
+    He was an American computer scientist best known for his pioneering work in
+    programming languages and was the first recipient of the Turing Award.
+    DeMillo, Lipton and Perlis criticized the idea of formal verification of programs and argued that
+    formal verifications in computer science will not play the same key role as proofs do in mathematics;
+    absence of continuity, the inevitability of change, and the complexity of specification of real programs
+    will make formal verification of programs difficult to justify and manage.
+url: https://en.wikipedia.org/wiki/Alan_Perlis
+images:
+    - filename: Alan_Perlis.png
+      license: proprietary
+      source_url: https://en.wikipedia.org/wiki/File:Alan_Perlis.jpg
