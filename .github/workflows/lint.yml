@@ -49,6 +49,11 @@ jobs:
                 echo "FAIL: Double quotes found in $FACT_YAML"
                 exit 1
             fi
+
+            if grep '`' $FACT_YAML; then
+                echo "FAIL: Back-tick quotes found in $FACT_YAML"
+                exit 2
+            fi
         done
 
   image_is_600x600:
