@@ -1,0 +1,14 @@
+title: Richard Lipton
+description: |
+    On September 06, 1946 was born Richard Jay Lipton.
+    He is an American-South African computer scientist who has worked in
+    computer science theory, cryptography, and DNA computing.
+    Mutation testing was originally proposed by Richard as a student in 1971,
+    and first developed and published by DeMillo, Lipton and Sayward.
+    This is a methodology in which small parts of the code are changed
+    in order to check the quality of the test suite.
+url: https://en.wikipedia.org/wiki/Richard_Lipton
+images:
+    - filename: lipton.png
+      license: proprietary
+      source_url: https://www.youtube.com/watch?v=eP2F2KIfVJ4
