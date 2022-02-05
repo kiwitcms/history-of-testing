@@ -1,0 +1,12 @@
+title: Winston Royce
+description: |
+    On August 15, 1929 was born Winston Royce.
+    He was an American computer scientist and a pioneer in
+    the field of software development.
+    Winston is known for his 1970 paper from which the
+    Waterfall model for software development was mistakenly drawn.
+url: https://en.wikipedia.org/wiki/Winston_W._Royce
+images:
+    - filename: WWRoyce.png
+      license: Public Domain
+      source_url: https://en.wikipedia.org/wiki/File:WWRoyce.jpg

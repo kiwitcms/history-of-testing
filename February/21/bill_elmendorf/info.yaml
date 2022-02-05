@@ -1,0 +1,15 @@
+title: Bill Elmendorf
+description: |
+    On February 21, 1925 was born William Robert Elmendorf.
+    He was an American engineer, author and tester known as
+    the originator of equivalence class testing and model based
+    testing.
+    In the IBM white paper 'Evaluation of the Functional Testing of Control Programs'
+    he calls for a disciplined approach to software functional testing
+    and describes what that should be.
+
+url: https://www.benderrbt.com/William-Elmendorf-In%20Memoriam.pdf
+images:
+    - filename: bill_elmendorf.png
+      license: proprietary
+      source_url: https://www.benderrbt.com/William-Elmendorf-In%20Memoriam.pdf
