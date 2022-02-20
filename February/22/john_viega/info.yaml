@@ -5,7 +5,7 @@ description: |
     Viega was the original author of OWASP's CLASP, a lightweight process for relating software development to security and
     a former editor-in-chief for the IEEE Security & Privacy Magazine.
     He was a pioneer in static analysis for security vulnerabilities and was responsible for the first publicly available tool, ITS4.,
-    as well as the prominent open source Rough Auditing Tool for Security (RATS). 
+    as well as the prominent open source Rough Auditing Tool for Security (RATS).
 
 url: https://en.wikipedia.org/wiki/John_Viega
 images:
