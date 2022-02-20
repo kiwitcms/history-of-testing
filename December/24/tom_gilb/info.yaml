@@ -1,0 +1,16 @@
+title: Thomas Steven Gilb
+description: |
+    On December 24, 1940 was born Tom Gilb.
+    He is an American systems engineer, consultant, and author,
+    known for the development of software metrics, software inspection,
+    and evolutionary processes.
+    Gilb is one of the first to define system and software reliability
+    and the relationship between human error and system error.
+    Check-out his lecture
+    'Lean QA: Much more cost-effective Quality Assurance methods, than testing'.
+
+url: https://www.gilb.com/Lean-QA-Much-more-cost-effective-Quality-Assurance-methods-than-testing
+images:
+    - filename: Tom_Gilb.jpg
+      license: Creative Commons Attribution 3.0 Unported
+      source_url: https://commons.wikimedia.org/wiki/File:Tom_Gilb_-_Lean_QA._Much_more_cost-effective_Quality_Assurance_methods,_than_testing_-_2014.jpg
