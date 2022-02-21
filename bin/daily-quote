@@ -56,12 +56,12 @@ SHORT_DESCRIPTION=$(yq -r ".description" $FACT_YAML | tr -s "\n" " " | cut -f1 -
 SOURCE_URL=$(yq -r ".url" $FACT_YAML)
 REPO_URL="https://github.com/kiwitcms/history-of-testing"
 
-FULL_DESCRIPTION="$DESCRIPTION #HistoryOfTesting\n\nSource: $SOURCE_URL\nContribute: $REPO_URL"
+FULL_DESCRIPTION="$DESCRIPTION #testing #community\n\nSource: $SOURCE_URL\nContribute: $REPO_URL"
 echo
 echo
 echo "$FULL_DESCRIPTION"
 
-TWITTER_DESCRIPTION="$SHORT_DESCRIPTION. #HistoryOfTesting\nSource: $SOURCE_URL\nContribute: $REPO_URL"
+TWITTER_DESCRIPTION="$SHORT_DESCRIPTION. #testing #community\nSource: $SOURCE_URL\nContribute: $REPO_URL"
 echo
 echo
 echo "$TWITTER_DESCRIPTION"
