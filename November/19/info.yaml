@@ -1,13 +1,12 @@
 title: Sergiy Vilkomir
 description: |
     On November 19, 1956 was born Sergiy Vilkomir.
-    He was a Ukrainian computer scientist and got PhD degree at Kharkov Polytechnic Institute,
+    He was a Ukrainian computer scientist and got PhD degree at Kharkov Polytechnic Institute.
     Vilkomir moved to USA, initially as Research Associate Professor at the University of Tennessee.
     There he achieved academic tenure in 2012 and was Head of the Software Testing Research Group (STRG).
     Vilkomir's main research contributions have been in the formalization of software testing.
     In particular, he proposed reinforced condition/decision coverage (RC/DC),
-    a stronger version of the modified condition/decision coverage (MC/DC) coverage criterion for software testing in safety-critical systems.
-    Sergiy Vilkomir died on February 9, 2020.
+    a stronger version of the modified condition/decision coverage (MC/DC) criterion for software testing in safety-critical systems.
 url: https://en.wikipedia.org/wiki/Sergiy_Vilkomir
 images:
     - filename: sergiy_vilkomir.jpg
