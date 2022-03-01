@@ -75,13 +75,23 @@ jobs:
       run: |
         for FACT_YAML in $(find -name info.yaml); do
             if grep '"' $FACT_YAML; then
-                echo "FAIL: Double quotes found in $FACT_YAML"
+                echo "FAIL: Double quotes found in $FACT_YAML. Replace with single quotes!"
                 exit 1
             fi
 
             if grep '`' $FACT_YAML; then
-                echo "FAIL: Back-tick quotes found in $FACT_YAML"
+                echo "FAIL: Back-tick quotes found in $FACT_YAML. Replace with single quotes!"
                 exit 2
+            fi
+
+            if grep '“' $FACT_YAML; then
+                echo "FAIL: Double quotes found in $FACT_YAML. Replace with single quotes!"
+                exit 3
+            fi
+
+            if grep '”' $FACT_YAML; then
+                echo "FAIL: Double quotes found in $FACT_YAML. Replace with single quotes!"
+                exit 4
             fi
         done
 
