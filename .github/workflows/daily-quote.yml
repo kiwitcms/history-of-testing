@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   # https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#scheduled-events
   schedule:
-    - cron: '45 11 * * *' # 11:45 UTC
+    - cron: '45 08 * * *' # 11:45 UTC
 
 jobs:
   daily_quote:
@@ -14,9 +14,9 @@ jobs:
         python-version: [3.8]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2.3.2
+      uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
 

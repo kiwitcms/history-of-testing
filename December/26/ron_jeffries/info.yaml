@@ -1,0 +1,13 @@
+title: Ron Jeffries
+description: |
+    On December 26, 1939 was born Ron Jeffries.
+    He is an American software engineer and the creator of extreme programming.
+    Jeffries was one of the 17 original signatories of the Agile Manifesto.
+    Extreme and Agile methods are closely associated with Test-Driven Development (TDD).
+    He is co-author of the book 'Extreme Programming Installed' and
+    he co-edited the IEEE Software Special Issue on Test-Driven Development.
+url: https://en.wikipedia.org/wiki/Ron_Jeffries
+images:
+    - filename: ron_jeffries.png
+      license: proprietary
+      source_url: https://agile.fm/agilefm/2018/4/12/ron-jeffries
