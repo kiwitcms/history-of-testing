@@ -19,7 +19,15 @@ if [ "$ARTIFACT_COUNT" == "1" ]; then
     ARTIFACT_PATH=${ARTIFACT_DIRS[0]}
 else
     YEAR=$(date +%y | cut -c2)
+
+    set +e
+    # Exit status is 0 if EXPRESSION is neither null nor 0,
+    # 1 if EXPRESSION is null or 0,
+    # 2 if EXPRESSION is syntactically invalid, and
+    # 3 if an error occurred.
     INDEX=$(expr $YEAR % $ARTIFACT_COUNT)
+    set -e
+
     ARTIFACT_PATH="${ARTIFACT_DIRS[$INDEX]}"
 fi
 
