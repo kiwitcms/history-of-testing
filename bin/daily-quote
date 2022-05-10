@@ -84,11 +84,11 @@ curl \
 echo
 echo
 
-# post to Twitter
+# post to a Twitter thread
 curl \
     -H "Authorization: Bearer $AYRSHARE_API_KEY" \
     -H "Content-Type: application/json" \
-    -d "{\"post\": \"$TWITTER_DESCRIPTION\", \"platforms\": [\"twitter\"], \"mediaUrls\": [\"$IMAGE_URL\"], \"shortenLinks\": \"false\"}" \
+    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"twitter\"], \"mediaUrls\": [\"$IMAGE_URL\"], \"shortenLinks\": \"false\", \"twitterOptions\": {\"thread\": true, \"threadNumber\": true}}" \
     -X POST https://app.ayrshare.com/api/post
 
 echo
