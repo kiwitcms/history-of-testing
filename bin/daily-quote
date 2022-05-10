@@ -19,7 +19,15 @@ if [ "$ARTIFACT_COUNT" == "1" ]; then
     ARTIFACT_PATH=${ARTIFACT_DIRS[0]}
 else
     YEAR=$(date +%y | cut -c2)
+
+    set +e
+    # Exit status is 0 if EXPRESSION is neither null nor 0,
+    # 1 if EXPRESSION is null or 0,
+    # 2 if EXPRESSION is syntactically invalid, and
+    # 3 if an error occurred.
     INDEX=$(expr $YEAR % $ARTIFACT_COUNT)
+    set -e
+
     ARTIFACT_PATH="${ARTIFACT_DIRS[$INDEX]}"
 fi
 
@@ -56,12 +64,12 @@ SHORT_DESCRIPTION=$(yq -r ".description" $FACT_YAML | tr -s "\n" " " | cut -f1 -
 SOURCE_URL=$(yq -r ".url" $FACT_YAML)
 REPO_URL="https://github.com/kiwitcms/history-of-testing"
 
-FULL_DESCRIPTION="$DESCRIPTION #testing #community\n\nSource: $SOURCE_URL\nContribute: $REPO_URL"
+FULL_DESCRIPTION="$DESCRIPTION #SoftwareTesting #community\n\nSource: $SOURCE_URL\nContribute: $REPO_URL"
 echo
 echo
 echo "$FULL_DESCRIPTION"
 
-TWITTER_DESCRIPTION="$SHORT_DESCRIPTION. #testing #community\nSource: $SOURCE_URL\nContribute: $REPO_URL"
+TWITTER_DESCRIPTION="$SHORT_DESCRIPTION. #SoftwareTesting #community\nSource: $SOURCE_URL\nContribute: $REPO_URL"
 echo
 echo
 echo "$TWITTER_DESCRIPTION"
@@ -76,11 +84,11 @@ curl \
 echo
 echo
 
-# post to Twitter
+# post to a Twitter thread
 curl \
     -H "Authorization: Bearer $AYRSHARE_API_KEY" \
     -H "Content-Type: application/json" \
-    -d "{\"post\": \"$TWITTER_DESCRIPTION\", \"platforms\": [\"twitter\"], \"mediaUrls\": [\"$IMAGE_URL\"], \"shortenLinks\": \"false\"}" \
+    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"twitter\"], \"mediaUrls\": [\"$IMAGE_URL\"], \"shortenLinks\": \"false\", \"twitterOptions\": {\"thread\": true, \"threadNumber\": true}}" \
     -X POST https://app.ayrshare.com/api/post
 
 echo
