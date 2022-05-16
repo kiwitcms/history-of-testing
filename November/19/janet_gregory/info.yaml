@@ -1,0 +1,15 @@
+title: Janet Gregory
+description: |
+    On November 19, 1953 was born Janet Gregory.
+    She is an agile testing coach and process consultant with DragonFire Inc
+    and has a degree in Computing Science from the University of Alberta.
+    Janet specializes in showing agile teams how testing activities are necessary for the whole team to develop good quality products and
+    helps them transition to agile development and teaches agile testing courses worldwide.
+    She is the co-author with Lisa Crispin of 'Agile Testing Condensed: A Brief Introduction',
+    'More Agile Testing: Learning Journeys for the Whole Team', and
+    'Agile Testing: A Practical Guide for Testers and Agile Teams'.
+url: https://janetgregory.ca/about/
+images:
+    - filename: janet_gregory.jpg
+      license: proprietary
+      source_url: https://hexawise.com/posts/smarter-software-testing-with-janet-gregory
