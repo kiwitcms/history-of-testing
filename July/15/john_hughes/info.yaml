@@ -1,9 +1,10 @@
 title: John Hughes
 description: |
     On July 15, 1958 was born John Hughes.
-    He is a computer scientist and professor in the department of Computing Science at the Chalmers University of Technology.
-    Hughes is a member of the Functional Programming group at Chalmers,
-    and much of his research relates to the Haskell programming language.
+    He is a professor at the Chalmers University of Technology and a member of the
+    Functional Programming group at Chalmers.
+    Hughes is also one of the developers of QuickCheck, a property based testing
+    library for the Haskell programming language.
     He was elected as an ACM Fellow in 2018 for 'contributions to software testing and functional programming'.
 url: https://en.wikipedia.org/wiki/John_Hughes_(computer_scientist)
 images:
