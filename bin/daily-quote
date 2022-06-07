@@ -74,11 +74,11 @@ echo
 echo
 echo "$TWITTER_DESCRIPTION"
 
-# post to Facebook and LinkedIn
+# post to Facebook, LinkedIn and Reddit
 curl \
     -H "Authorization: Bearer $AYRSHARE_API_KEY" \
     -H "Content-Type: application/json" \
-    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"facebook\", \"linkedin\"], \"mediaUrls\": [\"$IMAGE_URL\"], \"shortenLinks\": \"false\"}" \
+    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"facebook\", \"linkedin\", \"reddit\"], \"mediaUrls\": [\"$IMAGE_URL\"], \"shortenLinks\": \"false\", \"redditOptions\": {\"title\": $SHORT_DESCRIPTION, \"subreddit\": \"KiwiTCMS\"}}" \
     -X POST https://app.ayrshare.com/api/post
 
 echo
