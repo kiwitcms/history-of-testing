@@ -84,6 +84,8 @@ curl \
 echo
 echo
 
+exit 3
+
 # post to a Twitter thread
 curl \
     -H "Authorization: Bearer $AYRSHARE_API_KEY" \
