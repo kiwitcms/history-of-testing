@@ -78,7 +78,7 @@ echo "$TWITTER_DESCRIPTION"
 curl \
     -H "Authorization: Bearer $AYRSHARE_API_KEY" \
     -H "Content-Type: application/json" \
-    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"facebook\", \"linkedin\", \"reddit\"], \"mediaUrls\": [\"$IMAGE_URL\"], \"shortenLinks\": \"false\", \"redditOptions\": {\"title\": $SHORT_DESCRIPTION, \"subreddit\": \"KiwiTCMS\"}}" \
+    -d "{\"post\": \"$FULL_DESCRIPTION\", \"platforms\": [\"facebook\", \"linkedin\", \"reddit\"], \"mediaUrls\": [\"$IMAGE_URL\"], \"shortenLinks\": \"false\", \"redditOptions\": {\"title\": \"$SHORT_DESCRIPTION\", \"subreddit\": \"KiwiTCMS\"}}" \
     -X POST https://app.ayrshare.com/api/post
 
 echo
