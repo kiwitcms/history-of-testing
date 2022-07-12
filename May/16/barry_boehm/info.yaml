@@ -1,0 +1,14 @@
+title: Barry Boehm
+description: |
+    On May 16, 1935 was born Barry Boehm.
+    He an American software engineer, known for his many contributions to the area of software engineering.
+    Boehm created the spiral model of software development, in which the phases of development are repeatedly revisited. 
+    This iterative software development process influenced extreme programming.
+    In his paper Software Engineering, published in the December 1976 issue of IEEE Transactions, 
+    Barry Boehm publishes his cost-of-change curve. The curve essentially shows that the cost of changing the software 
+    (fixing a software defect) rises exponentially in time.
+url: https://en.wikipedia.org/wiki/Barry_Boehm
+images:
+    - filename: barry_boehm.jpg
+      license: Creative Commons Attribution-Share Alike 2.0 Generic
+      source_url: https://commons.wikimedia.org/wiki/File:O_lend%C3%A1rio_Barry_Boehm.jpg
