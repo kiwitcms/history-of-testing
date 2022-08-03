@@ -1,0 +1,17 @@
+title: Alexander Todorov
+description: |
+    On October 4, 1982 was born Alexander Todorov.
+    He is a Bulgarian QA engineer responsible for testing
+    multipl open source products and a frequent speaker.
+    Alex has also been serving as co-organizer for the popular
+    'Testing and Automation' devroom at FOSDEM conference!
+    He holds a masters degree in Computer Science and Engineering
+    from the Technical University of Sofia and has been a contributor
+    and maintainer to various test related tools.
+    Alex is the project lead of Kiwi TCMS - a very popular
+    open source test management system.
+url: http://atodorov.org
+images:
+    - filename: atodorov.jpg
+      license: Creative Commons Attribution-Share Alike 2.0 Generic
+      source_url: https://avatars.githubusercontent.com/u/1002300?v=4
