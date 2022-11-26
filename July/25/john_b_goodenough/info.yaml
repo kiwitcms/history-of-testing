@@ -1,0 +1,14 @@
+title: John B. Goodenough
+description: |
+    On July 25, 1922 was born John B Goodenough.
+    He is an American materials scientist, a solid-state physicist, and a Nobel laureate in chemistry.
+    John is widely credited with the identification and development of the lithium-ion battery.
+    Together with Susan L. Gerhar, he is a author of Toward a theory of test data selection paper,
+    published in: IEEE Transactions on Software Engineering (June 1975).
+    The paper examines the theoretical and practical role of testing in software development.
+    The authors prove a fundamental theorem showing that properly structured tests are capable of demonstrating the absence of errors in a program.
+url: https://en.wikipedia.org/wiki/John_B._Goodenough
+images:
+    - filename: john_b_goodenough.jpg
+      license: Creative Commons Attribution 2.0 Generic
+      source_url: https://commons.wikimedia.org/wiki/File:Nobel_9_Dec_2019_029_copy_(49204051647)_(cropped).jpg
