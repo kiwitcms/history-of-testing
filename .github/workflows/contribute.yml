@@ -6,7 +6,7 @@ on:
 
 jobs:
   contribute:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
 
     steps:
     - name: Generate daily quote and image
